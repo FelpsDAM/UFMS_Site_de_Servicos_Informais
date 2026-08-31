@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="engrenagem.ico" type="image/x-icon">
-    <link rel="stylesheet" href="login.css">
-    <title>Login</title>
-</head>
-<body>
-    <main>
-        <section id="login">
-            <div id="imagemlogin">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="engrenagem.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <title>Login | Serviços Informais</title>
+    </head>
+    <body>
+        <main class="centralizar">
+            <!--Área geral de todo o login-->
+            <div class="area-login">
+                <h1 class="titulo-principal">Serviços Informais</h1>
+
+                <!--Sessão campos do login-->
+                <section class="cabecalho">
+                    <header>
+                        <h2 class="titulo-login">Login</h2>
+                    </header>
+
+                    <!--Formulário com entradas-->
+                    <form class="formulario" action="#" method="post" novalidate>
+
+                        <!--Usuário-->
+                        <div class="campo-formulario">
+                            <label class="campo" for="usuario">
+                                <span class="campo-obrigatorio">*</span>Login:
+                            </label>
+                            <input class="inserir" type="text" id="usuario" name="usuario" placeholder="Seu usuário" required>
+                        </div>
+
+                        <!--Senha-->
+                        <div class="campo-formulario">
+                            <label for="campo" for="senha">
+                                <span class="campo-obrigatorio">*</span>Senha:
+                            </label>
+                            <input class="inserir" type="password" name="senha" id="senha" placeholder="Senha mínima com 6 dígitos" minlength="6" required>
+                        </div>
+
+                        <!--Botão de entrada e opções-->
+                        <div class="entrar">
+                            <button class="logar" type="submit">Iniciar</button>
+                        </div>
+                    </form>
+                </section>
+
+                <p class="opcoes-login">
+                    Gostaria de <a href="cadastro.html">criar uma conta</a>
+                </p>
             </div>
-            <div id="entradas">
-                <h1>Site de serviços informais</h1>
-                <p>O seu site de trabalhos da comunidade regional</p>
-                <form action="null">
-                    <div class="email">
-                        <span>&#9993</span>
-                        <input type="email" name="email" id="idemail" placeholder="exemplo@xxxx.com" maxlength="20" required>
-                    </div>
-                    <div class="senha">
-                        <span>&#128477</span>
-                        <input type="password" name="senha" id="idsenha" placeholder="Mínimo de 8 dígitos" minlength="8" maxlength="15" required>
-                    </div>
-                    <input type="submit" value="acessar">
-                    <p>Ainda não tem login? <a href="cadastro.html">Cadastre-se</a></p>
-                    <a href="recuperarsenha.html">Esqueci a senha</a>
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer>
-    </footer>
-</body>
+
+        </main>
+    </body>
 </html>

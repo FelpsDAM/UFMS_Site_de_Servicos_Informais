@@ -1,37 +1,169 @@
-:root {
-    /*Estilização fontes e paleta*/
-    font-family: sans-serif;
-    --cor-principal: #1A535C;
-    --cor-secundaria: #3C220C;
-    --cor-detalhes: #CCB7AE;
-    --cor-fundo: #F7EFEC;
+/* Configurações básicas */
+
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    min-height: 100vh;
-    background-color: var(--cor-fundo);
-    color: var(--cor-secundaria);
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #F7EFEC;
+  color: #3C220C;
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
 }
 
-h1, h2, h3 {
-    font-family: Arial, Helvetica, sans-serif;
+h1, h2 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3C220C;
 }
 
-/*Alinhamentos*/
+a {
+  color: inherit;
+}
+
+/* Centralizando elementos principais */
+.centralizar {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
 .area-login {
-    width: 100%;
-    max-width: 26rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 100%;
+  max-width: 416px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+.titulo-principal {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #1A535C;
+}
+
+/*Box dos elementos no centro*/
 .cabecalho {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--cor-principal);
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #CCB7AE;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(60, 34, 12, 0.14);
+  overflow: hidden;
+  text-align: left;
 }
 
+.cabecalho header {
+  background-color: #1A535C;
+  padding: 24px;
+  text-align: center;
+}
+
+.titulo-login {
+  font-size: 24px;
+  font-weight: 600;
+  color: #F7EFEC;
+}
+
+.formulario {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/*Campos de entrada*/
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.campo-obrigatorio {
+  color: #b3261e;
+  margin-right: 2px;
+}
+
+.inserir {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #CCB7AE;
+  border-radius: 6px;
+  background-color: #F7EFEC;
+  color: #3C220C;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.inserir:focus {
+  outline: 3px solid #2d7481;
+}
+
+.entrar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/*Botão de login*/
+.logar {
+  padding: 10px 26px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1A535C;
+  color: #F7EFEC;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logar:hover {
+  background-color: #123f46;
+}
+
+/*Estilização do rodapé*/
+.opcoes-login {
+  margin-top: 24px;
+  font-size: 15px;
+}
+
+.opcoes-login a {
+  color: #1A535C;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/*Responsividade dos media-query*/
+
+/* Tamanho para celulares */
+@media (max-width: 352px) {
+  .titulo-principal {
+    font-size: 26px;
+  }
+  .titulo-login {
+    font-size: 20px;
+  }
+}
+
+/*Computadores*/
+@media (min-width: 1200px) {
+  .titulo-principal {
+    font-size: 44px;
+  }
+  .campo, .inserir, .logar, .opcoes-login {
+    font-size: 17px;
+  }
+}

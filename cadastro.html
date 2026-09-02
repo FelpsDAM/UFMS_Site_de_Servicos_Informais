@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="engrenagem.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <title>Cadastro | Serviços Informais</title>
+    </head>
+    <body>
+        <main class="centralizar">
+            <!--Box principal-->
+            <div class="area-cadastro">
+                <form class="formulario-cadastro" action="#" method="post" novalidate>
+
+                    <!--Campos do cadastro-->
+                    <section class="cabecalho">
+                        <header>
+                            <h2 class="titulo-login">Cadastro</h2>
+                        </header>
+
+                        <div class="formulario">
+
+                            <!--Nome-->
+                            <div class="campo-formulario">
+                                <label class="campo" for="nome">
+                                    <span class="campo-obrigatorio">*</span>Nome:
+                                </label>
+                                <input class="inserir" type="text" id="nome" name="nome" placeholder="Fulano de Ciclano" required>
+                            </div>
+
+                            <!--Email-->
+                            <div class="campo-formulario">
+                                <label class="campo" for="email">
+                                    <span class="campo-obrigatorio">*</span>Email:
+                                </label>
+                                <input class="inserir" type="email" id="email" name="email" placeholder="fulano@xmail.com" required>
+                            </div>
+
+                            <!--Telefone-->
+                            <div class="campo-formulario">
+                                <label class="campo" for="telefone">
+                                    <span class="campo-obrigatorio">*</span>Telefone:
+                                </label>
+                                <input class="inserir" type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" required>
+                            </div>
+
+                            <!--Data de nascimento-->
+                            <div class="campo-formulario">
+                                <label class="campo" for="dia">
+                                    <span class="campo-obrigatorio">*</span>Data de nascimento:
+                                </label>
+                                <div class="campo-data">
+                                    <input class="data" type="number" id="dia" name="dia" placeholder="Dia" min="1" max="31" required>
+                                    <span>/</span>
+                                    <input class="data" type="number" id="mes" name="mes" placeholder="Mês" min="1" max="12" required>
+                                    <span>/</span>
+                                    <input class="data" type="number" id="ano" name="ano" placeholder="Ano" min="1900" max="2100" required>
+                                </div>
+                            </div>
+
+                            <!--CPF-->
+                            <div class="campo-formulario">
+                                <label class="campo" for="cpf">
+                                    <span class="campo-obrigatorio">*</span>CPF:
+                                </label>
+                                <input class="inserir" type="text" id="cpf" name="cpf" placeholder="xxx.xxx.xxx-xx" required>
+                            </div>
+
+                            <!--Login-->
+                            <div class="campo-formulario">
+                                <label class="campo" for="usuario">
+                                    <span class="campo-obrigatorio">*</span>Login:
+                                </label>
+                                <input class="inserir" type="text" id="usuario" name="usuario" placeholder="Usuário" required>
+                            </div>
+
+                            <!--Senha-->
+                            <div class="campo-formulario">
+                                <label class="campo" for="senha">
+                                    <span class="campo-obrigatorio">*</span>Senha:
+                                </label>
+                                <input class="inserir" type="password" id="senha" name="senha" placeholder="No mínimo 8 dígitos com caractere especial" minlength="8" required>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!--Rodapé-->
+                    <div class="caixa-selecao">
+                        <input type="checkbox" id="declaracao" name="declaracao" required>
+                        <label for="declaracao">Declaro serem verdadeiras as minhas informações fornecidas ao cadastro.</label>
+                    </div>
+
+                    <div class="caixa-selecao">
+                        <input type="checkbox" id="politicas" name="politicas" required>
+                        <label for="politicas">Estou de acordo com as <a href="#">políticas de uso</a> do site.</label>
+                    </div>
+
+                    <p class="texto-obrigatorio">* Campos obrigatórios</p>
+
+                    <!--Botões-->
+                    <div class="area-botoes">
+                        <a class="voltar" href="index.html">Voltar</a>
+                        <a class="logar" href="servicos.html">Confirmar</a>
+                    </div>
+
+                </form>
+            </div>
+
+        </main>
+    </body>
+</html>

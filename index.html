@@ -20,7 +20,7 @@
                     </header>
 
                     <!--Formulário com entradas-->
-                    <form class="formulario" action="#" method="post">
+                    <form class="formulario" id="formLogin" action="#" method="post">
 
                         <!--Usuário-->
                         <div class="campo-formulario">
@@ -40,7 +40,7 @@
 
                         <!--Botão de entrada e opções-->
                         <div class="entrar">
-                            <a class="logar" href="servicos.html">Iniciar</a>
+                            <button class="logar" type="submit">Iniciar</button>
                         </div>
                     </form>
                 </section>
@@ -51,5 +51,13 @@
             </div>
 
         </main>
+
+        <!--Script para validar o preenchimento dos campos em vez de redirecionar a página diretamente-->
+        <script>
+            document.getElementById("formLogin").addEventListener("submit", function (evento) {
+                evento.preventDefault();
+                window.location.href = "servicos.html";
+            });
+        </script>
     </body>
 </html>

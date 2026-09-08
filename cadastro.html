@@ -11,7 +11,7 @@
         <main class="centralizar">
             <!--Box principal-->
             <div class="area-cadastro">
-                <form class="formulario-cadastro" action="#" method="post" novalidate>
+                <form class="formulario-cadastro" id="formCadastro" action="#" method="post">
 
                     <!--Campos do cadastro-->
                     <section class="cabecalho">
@@ -102,12 +102,20 @@
                     <!--Botões-->
                     <div class="area-botoes">
                         <a class="voltar" href="index.html">Voltar</a>
-                        <a class="logar" href="servicos.html">Confirmar</a>
+                        <button class="logar" type="submit">Confirmar</button>
                     </div>
 
                 </form>
             </div>
 
         </main>
+
+        <!--Script simples para redirecionar após validação-->
+        <script>
+            document.getElementById("formCadastro").addEventListener("submit", function (evento) {
+                evento.preventDefault(); // impede o formulário de recarregar a página
+                window.location.href = "servicos.html"; // só executa se passou pela validação
+            });
+        </script>
     </body>
 </html>

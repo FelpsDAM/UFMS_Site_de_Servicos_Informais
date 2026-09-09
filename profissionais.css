@@ -1,0 +1,107 @@
+.perfil-topo {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 20px 0 20px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border: 1px solid #CCB7AE;
+  border-radius: 50%;
+  background-color: #F7EFEC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.perfil-nome {
+  font-size: 22px;
+}
+
+.perfil-info p {
+  margin: 2px 0;
+}
+
+.perfil-corpo {
+  padding: 20px;
+}
+
+.secao-titulo {
+  font-size: 16px;
+  margin: 16px 0 8px 0;
+}
+
+.secao-titulo:first-child {
+  margin-top: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tag {
+  background-color: #3C220C;
+  color: #F7EFEC;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.perfil-resumo {
+  background-color: #F7EFEC;
+  border: 1px solid #CCB7AE;
+  border-radius: 6px;
+  padding: 14px;
+  margin: 8px 0 0 0;
+}
+
+/*-------------------- Responsividade da página de Trabalhadores --------------------*/
+
+/* Tablets */
+@media (min-width: 768px) {
+  .perfil-nome {
+    font-size: 24px;
+  }
+}
+
+/* Telas de TV */
+@media (min-width: 1920px) {
+  .avatar {
+    width: 96px;
+    height: 96px;
+    font-size: 48px;
+  }
+  .perfil-nome {
+    font-size: 32px;
+  }
+  .perfil-info p {
+    font-size: 19px;
+  }
+  .secao-titulo {
+    font-size: 22px;
+  }
+  .tag {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  .perfil-resumo {
+    font-size: 19px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 352px) {
+  .perfil-topo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

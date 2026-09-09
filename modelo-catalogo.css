@@ -1,0 +1,142 @@
+.cabecalho-site {
+  background-color: #ffffff;
+  border-bottom: 1px solid #CCB7AE;
+}
+
+.titulo-site {
+  text-align: center;
+  font-size: 28px;
+  padding: 20px 16px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #CCB7AE;
+}
+
+.menu-link {
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #3C220C;
+  border-right: 1px solid #CCB7AE;
+}
+
+.menu-link:hover {
+  background-color: #F7EFEC;
+}
+
+.menu-link.ativo {
+  background-color: #1A535C;
+  color: #F7EFEC;
+}
+
+.menu-direita {
+  margin-left: auto;
+}
+
+/* Container com a lista de cards */
+.pagina-catalogo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 100px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cartão base usado nas páginas de catálogo */
+.cartao {
+  background-color: #ffffff;
+  border: 1px solid #CCB7AE;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Linha de botões no rodapé do cartão */
+.cartao-acoes {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.botao-primario {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1A535C;
+  color: #F7EFEC;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-primario:hover {
+  background-color: #123f46;
+}
+
+.botao-secundario {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #CCB7AE;
+  background-color: #ffffff;
+  color: #3C220C;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-secundario:hover {
+  background-color: #F7EFEC;
+}
+
+.botao-perigo {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #b3261e;
+  background-color: #ffffff;
+  color: #b3261e;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botao-perigo:hover {
+  background-color: #fbeceb;
+}
+
+/*-------------------- Responsividade do modelo de catálogo --------------------*/
+
+/* Computadores */
+@media (min-width: 1200px) {
+  .titulo-site {
+    font-size: 32px;
+  }
+}
+
+/* Telas de TV */
+@media (min-width: 1920px) {
+  .pagina-catalogo {
+    max-width: 1200px;
+  }
+  .titulo-site {
+    font-size: 40px;
+  }
+  .menu-link {
+    font-size: 20px;
+    padding: 18px 26px;
+  }
+  .botao-primario, .botao-secundario, .botao-perigo {
+    font-size: 18px;
+    padding: 12px 22px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 352px) {
+  .cartao-acoes {
+    flex-direction: column;
+  }
+}

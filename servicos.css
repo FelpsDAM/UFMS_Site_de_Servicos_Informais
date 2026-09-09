@@ -1,0 +1,97 @@
+.servico-topo {
+  background-color: #CCB7AE;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.servico-titulo {
+  font-size: 18px;
+}
+
+.servico-autor {
+  margin: 0;
+  font-size: 14px;
+}
+
+.link-perfil {
+  color: #1A535C;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.servico-conteudo {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.servico-info {
+  flex: 1 1 180px;
+}
+
+.servico-info p {
+  margin: 0 0 12px 0;
+}
+
+.servico-descricao {
+  flex: 2 1 300px;
+  background-color: #F7EFEC;
+  border: 1px solid #CCB7AE;
+  border-radius: 6px;
+  padding: 14px;
+}
+
+/* Botão fixo para postar serviço novo */
+.botao-postar {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 16px 24px;
+  border-radius: 10px;
+  background-color: #2e9e2e;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.botao-postar:hover {
+  background-color: #237c23;
+}
+
+/*-------------------- Responsividade da página de Serviços --------------------*/
+
+/* Tablets */
+@media (min-width: 768px) {
+  .servico-titulo {
+    font-size: 20px;
+  }
+}
+
+/* Telas de TV */
+@media (min-width: 1920px) {
+  .servico-titulo {
+    font-size: 24px;
+  }
+  .servico-descricao {
+    font-size: 19px;
+  }
+  .botao-postar {
+    font-size: 24px;
+    padding: 20px 30px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 352px) {
+  .servico-topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
